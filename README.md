@@ -1,5 +1,18 @@
 # PreciseOnco_meta-analysis
 
-# Project Abstract
+# Project Description
 
-We conducted systematic review and meta-analysis in order to provide a comprehensive overview of outcomes in patients undergoing personalized genomics-based versus non-personalized treatment in oncology. The PubMed searches detected 873 studies based on phase II clinical trials’ results published from 2010 to 2021. We selected 49 studies, having 101 arms and 7012 patients for the analysis. We compared 1-year Overall Survival (OS), Progression-Free Survival (PFS), and Response Rate (RR) between genomics-based personalized and non-personalized arms. Mann-Whitney test did not detect any significant difference in 1-year OS, but RR and 1-year PFS were significantly higher in personal arms (p=0.009 and p=0.011). Medians of PFS and OS were also higher in personalized arms (p=0.018 and p=0.032). Proportional meta-analysis and meta-regression detected a significant association between personal treatment and RR. RRs were significantly higher in personal arms (p=0.037). The same results were obtained for 1-year PFS and OS rates (p=0.043 and p=0.022). There were no differences between personal and non-personal studies in subgroup analysis. Previous drug treatment, type of therapy (target/immunotherapy/cytotoxic), study design and journal impact factor did not effect on RR, PFS and OS. In the evaluated studies personalization only affected the outcomes. This study highlights the benefits of a personalized approach to cancer treatment using genomic data. Despite the limitations, the personalized approach offers hope for the development of precision oncology and improved cancer outcomes.
+We conducted systematic review and meta-analysis in order to provide a comprehensive overview of outcomes in patients undergoing personalized genomics-based versus non-personalized treatment in oncology. The PubMed searches detected 873 studies based on phase II clinical trials’ results published from 2010 to 2021. We selected 49 studies, having 101 arms and 7012 patients for the analysis. We compared Response Rate (RR), medians and 1-year rates of Overall Survival (OS) and Progression-Free Survival (PFS)  between genomics-based personalized and non-personalized arms. 
+
+Courrent repository contains initial data and detailed R codes for proportional meta-analysis and meta-regression. Mann-Whitney and Shapiro test presented in the markdown as examaples only. 
+The searches, study selection, data extraxtion and systhesis were performed in accordance to PRISMA (preferred reporting items for systematic review and meta-analysis) guidelines.
+The research protocol was registered in PROSPERO (International prospective register of systematic reviews, https://www.crd.york.ac.uk/PROSPERO), record ID CRD42024504021
+
+We performed proportional meta-analysis using the RStudio program, utilizing the R programming language and packages "meta," "metafor," and "tidyverse" 17. We calculated relative risks using the Der Simonian-Laird algorithm18. Heterogeneity was evaluated basing on τ2-statistic18,19 and I2 Higgins-Thompson statistic20,21. τ2 confidence intervals were calculated with Jackson method22. We compared the effects using Fisher's exact test and employed the t-test or Mann-Whitney test based on type of distribution, with a significance level set at p<0.05. The distribution normality was tested with Shapiro-Wilk test, α=0.05.
+
+# References
+1. Page, M. J. et al. The PRISMA 2020 statement: an updated guideline for reporting systematic reviews. doi:10.1136/bmj.n71.
+2. Barker, T. H. et al. Conducting proportional meta-analysis in different types of systematic reviews: a guide for synthesisers of evidence. BMC Med Res Methodol 21, 1–9 (2021).
+3. DerSimonian, R. & Laird, N. Meta-analysis in clinical trials. Control Clin Trials 7, 177–188 (1986).
+4. Higgins, J. P. T., López-López, J. A. & Aloe, A. M. Meta-Regression. Handbook of Meta-Analysis 129–149 (2020) doi:10.1201/9781315119403-7/META-REGRESSION-JULIAN-HIGGINS-JOSE-L.
+
