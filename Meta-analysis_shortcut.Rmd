@@ -10,7 +10,7 @@ library(meta)
 library(metafor)
 #upload data
 
-tb <- read.csv2("E:/Статьи и НИР/Meta-analysis/Обработка данных/All2_r2.csv", dec = ",")
+tb <- read.csv2("E:/Статьи и НИР/Meta-analysis/Обработка данных/Dataset_git_repo.csv", dec = ",")
 # meta-analysis variable DerSimonanian-Laird algotrithm
 RR_out <- metaprop(RR, N, sm="PFT", data=tb, method="Inverse", method.tau="DL") #Response Rate (RR)
 RR_out
